@@ -1,0 +1,16 @@
+This subfolder consists of the files relating to tasks-2
+
+To make sure the code ran properly, I created a dummy account on twitter and ran the collection and analysis script through it to make sure the code runs correctly. 
+The dummy account consisting of very few tweets made it extremely easy for me to debug/format the code
+
+user-analysis.py
+``````````````````````````
+the python script user-analysis.py consists of the code for collection and of data from a user's twitter feed(SrBachchan) and stores the tweets (100) in a file named SrBachchan_tweets.csv
+
+SrBachchan_tweets.csv
+``````````````````````````
+this is the csv where the python program dumps the tweets it collects
+
+univariate_X.R and bivariate_X.R	(X = 1,2,3)
+``````````````````````````
+these are the scripts for the data analysis part of the tasks

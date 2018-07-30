@@ -1,0 +1,13 @@
+#Correlation between all pairs of attributes
+#Four columns numbered 1 to 4
+mydata <- read.csv("iris.data", header = TRUE)
+for(i in 1:4)
+{
+	for(j in 1:4)
+	{
+		core <- cor(mydata[,i], mydata[,j])
+		print(paste(i, "and", j, "::"))
+		print(core)
+	}
+	
+}

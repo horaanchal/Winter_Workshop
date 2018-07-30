@@ -1,0 +1,40 @@
+# Mean, median, mode of all attributes
+
+mydata <- read.csv("SrBachchan_tweets.csv", header = TRUE)
+print("Mean: ")
+a1 = mean(mydata$id)
+b1 = mean(mydata$length)
+c1 = mean(mydata$hashtag_count)
+d1 = mean(mydata$mention-count)
+e1 = mean(mydata$likes-count)
+f1 = mean(mydata$retweet-count)
+g1 = mean(mydata$sentiment)
+h1 = mean(mydata$created_at)
+print(paste(a1, b1, c1, d1, e1, f1, g1, h1, sep="-"))
+
+print("Median: ")
+a2 = median(mydata$id)
+b2 = median(mydata$length)
+c2 = median(mydata$hashtag_count)
+d2 = median(mydata$mention-count)
+e2 = median(mydata$likes-count)
+f2 = median(mydata$retweet-count)
+g2 = median(mydata$sentiment)
+h2 = median(mydata$created_at)
+print(paste(a2, b2, c2, d2, e2, f2, g2, h2, sep="-"))
+
+print("Mode:")
+# R does not have a standard in-built function to calculate mode, hence we create a function
+getmode <- function(v) {
+	uniqv <- unique(v)
+	uniqv[which.max(tabulate(match(v,uniqv)))]
+}
+a3 <- getmode(mydata$id)
+b3 <- getmode(mydata$length)
+c3 <- getmode(mydata$hashtag_count)
+d3 <- getmode(mydata$mention-count)
+e3 <- getmode(mydata$likes-count)
+f3 <- getmode(mydata$retweet-count)
+g3 <- getmode(mydata$sentiment)
+h3 <- getmode(mydata$created_at)
+print(paste(a3, b3, c3, d3, e3, f3, g3, h3, sep="-"))
